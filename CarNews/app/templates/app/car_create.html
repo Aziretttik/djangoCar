@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <center>
+        <h1>Создание машины</h1>
+
+        <form method="post" action=".">
+            {% csrf_token %}
+            <label>Категория:</label>
+            <input type="number" name="category_id">
+
+            <br><br><br><br>
+
+            <label>Название:</label>
+            <input type="text" name="title" placeholder="введите название">
+
+            <br><br><br><br>
+
+            <label>Модель:</label>
+            <input type="text" name="model" placeholder="введите модель">
+
+            <br><br><br><br>
+
+            <label>Год:</label>
+            <input type="date" name="year" placeholder="введите дату">
+
+            <br><br><br><br>
+
+            <label>Цвет:</label>
+            <input type="text" name="color_id" placeholder="введите цвет">
+
+            <button type="submit">Создать</button>
+        </form>
+
+    </center>
+
+</body>
+</html>

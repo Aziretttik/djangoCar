@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Category(models.Model):
     title = models.CharField(max_length=123)
 
@@ -37,5 +38,17 @@ class Car(models.Model):
     class Meta:
         verbose_name = 'машина'
         verbose_name_plural = 'машины'
+
+class News(models.Model):
+    title = models.CharField(max_length=123)
+    description = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+
+
 
 
